@@ -1,0 +1,23 @@
+{
+  "name": "create-chrome-extension-react-app",
+  "version": "1.0.0",
+  "description": "make package that configure react typescript work with chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessi68/create-chrome-extension-react-app.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "react"
+  ],
+  "author": "jessi68",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessi68/create-chrome-extension-react-app/issues"
+  },
+  "homepage": "https://github.com/jessi68/create-chrome-extension-react-app#readme"
+}
