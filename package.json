@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/jessi68/create-chrome-extension-react-app/issues"
   },
-  "homepage": "https://github.com/jessi68/create-chrome-extension-react-app#readme"
+  "homepage": "https://github.com/jessi68/create-chrome-extension-react-app#readme",
+  "dependencies": {
+    "commander": "^8.3.0"
+  },
+  "bin" : {
+    "log-run" : "bin/index.js"
+  },
+  "files" : [
+    "bin"
+  ]
 }
