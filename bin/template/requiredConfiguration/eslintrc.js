@@ -7,3 +7,5 @@ const eslintrc = `{
       "extends": ["plugin:prettier/recommended", "airbnb"],
       "parser": "@typescript-eslint/parser"
 }`
+
+module.exports = eslintrc

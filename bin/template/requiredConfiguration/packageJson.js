@@ -7,17 +7,11 @@ const packageJson = ({ name }) => `{
       "author": "",
       "license": "MIT",
       "devDependencies": {
-        "@babel/cli": "^7.16.7",
+      "@babel/cli": "^7.16.7",
       "@babel/core": "^7.16.7",
       "@babel/preset-env": "^7.12.1",
       "@babel/preset-react": "^7.12.1",
       "@hot-loader/react-dom": "^17.0.0-rc.2",
-      "@storybook/addon-actions": "^6.4.9",
-      "@storybook/addon-essentials": "^6.4.9",
-      "@storybook/addon-links": "^6.4.9",
-      "@storybook/builder-webpack5": "^6.4.9",
-      "@storybook/manager-webpack5": "^6.4.9",
-      "@storybook/react": "^6.4.9",
       "@types/chrome": "0.0.125",
       "@types/react": "^16.14.21",
       "@types/react-dom": "^16.9.14",
@@ -45,7 +39,7 @@ const packageJson = ({ name }) => `{
       "react-dom": "^16.14.0"
     },
     "scripts": {
-      "start": "webpack --watch",
+      "start": "webpack serve",
       "build": "webpack"
     }
   }`;
