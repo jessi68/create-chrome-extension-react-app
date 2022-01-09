@@ -14,10 +14,11 @@ const webpackConfig = require("./template/requiredConfiguration/webpackconfig");
 const background = require("./template/chrome/background");
 const content = require("./template/chrome/content");
 const popup = require("./template/chrome/popup");
+const manifestJson = require("./template/chrome/manifest.js");
+
 const packageJson = require("./template/requiredConfiguration/packageJson");
 const appTemplate = require("./app");
 const {execSync} = require("child_process");
-
 
 const execCommandSynchronized = function(command) {
     execSync(command).toString();
@@ -28,18 +29,7 @@ const execCommandSynchronized = function(command) {
 
 const run = () => {
  
-    const removeChromeCra = function () {
-        try {
-          execSync("rm -rf node_modules/ package.json yarn.lock");
-          execSync(`mv ./${projectName}/* ./`);
-          execSync(`mv ./${projectName}/.* ./`);
-        } catch (error) {
-          console.error(error);
-        } finally {
-          execSync(`rmdir ${projectName}`);
-        }
-      };
-    
+
     // const goToFolderAndExecCommand = function (cmd) {
     //     execSync(`cd ${projectName} && ${cmd}`);
     //   };
@@ -75,9 +65,15 @@ const run = () => {
     fs.writeFileSync(`${projectName}/src/content.tsx`, content);
     fs.writeFileSync(`${projectName}/src/popup.tsx`, popup);
     fs.writeFileSync(`${projectName}/src/App.tsx`, appTemplate);
+    
+    execCommandSynchronized(`cd ${projectName} && mkdir public`);
 
-    execCommandSynchronized(`npm install --legacy-peer-deps`);
-    execCommandSynchronized('npm install');
+    fs.writeFileSync(`${projectName}/public/manifest.json`, manifestJson(projectName));
+
+    execCommandSynchronized(`cd ${projectName} && npm install --legacy-peer-deps`);
+    execCommandSynchronized(`cd ${projectName} && npm install`);
+
+
     //removeChromeCra();
 }
 
