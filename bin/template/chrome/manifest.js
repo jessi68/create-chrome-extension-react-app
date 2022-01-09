@@ -7,9 +7,9 @@ const manifestJson = (projectName) => `{
      
     },
     "browser_action": {
-      "default_icon": {
-        "http://*/*", "https://*/*", "<all_urls>"
-      }
+      "default_icon": [
+     
+      ],
       "show_matches": [
        
       ]
