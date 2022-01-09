@@ -7,12 +7,7 @@ const manifestJson = (projectName) => `{
      
     },
     "browser_action": {
-      "default_icon": [
-     
-      ],
-      "show_matches": [
-       
-      ]
+        "default_popup": "popup.html"
     },
     "background": {
       "scripts": [

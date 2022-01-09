@@ -15,6 +15,7 @@ const background = require("./template/chrome/background");
 const content = require("./template/chrome/content");
 const popup = require("./template/chrome/popup");
 const manifestJson = require("./template/chrome/manifest.js");
+const popupHtml = require("./template/chrome/popupHtml.js");
 
 const packageJson = require("./template/requiredConfiguration/packageJson");
 const appTemplate = require("./app");
@@ -23,9 +24,6 @@ const {execSync} = require("child_process");
 const execCommandSynchronized = function(command) {
     execSync(command).toString();
 }
-
-
-
 
 const run = () => {
  
@@ -69,6 +67,7 @@ const run = () => {
     execCommandSynchronized(`cd ${projectName} && mkdir public`);
 
     fs.writeFileSync(`${projectName}/public/manifest.json`, manifestJson(projectName));
+    fs.writeFileSync(`${projectName}/public/popup.html`, popupHtml(projectName));
 
     execCommandSynchronized(`cd ${projectName} && npm install --legacy-peer-deps`);
     execCommandSynchronized(`cd ${projectName} && npm install`);
