@@ -1,6 +1,6 @@
 {
   "name": "create-chrome-extension-react-app",
-  "version": "2.5.20",
+  "version": "2.5.21",
   "description": "make package that configure react typescript work with chrome extension",
   "main": "src/index.js",
   "scripts": {

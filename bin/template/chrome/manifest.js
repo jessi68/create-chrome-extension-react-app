@@ -1,5 +1,5 @@
 const manifestJson = (projectName) => `{
-    "name": ${projectName},
+    "name": "${projectName}",
     "description": "",
     "manifest_version": 2,
     "version": "1.0.0",
